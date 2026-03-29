@@ -12,8 +12,9 @@ public class TestController {
     public String sayHello() {
         return "Hello, World!";
     }
-    @GetMapping("/greet/{id}")
-    public String greet(@PathVariable String id) {
-        return "Hello " + id;
+    //http://localhost:8080/api/v1/test/greet?name=John
+    @GetMapping("/greet?name={name}")
+    public String greet(@PathVariable String name) {
+        return "Hello, " + name + "!";
     }
 }
