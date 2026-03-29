@@ -14,4 +14,9 @@ public class TestController {
     public String greet(@RequestParam String name) {
         return "Hello, " + name + "!";
     }
+
+    @GetMapping("/welcome/{name}")
+    public String welcome(@PathVariable String name) {
+        return "Hello, " + name + "!";
+    }
 }
