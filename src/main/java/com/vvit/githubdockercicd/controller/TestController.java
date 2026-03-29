@@ -1,9 +1,6 @@
 package com.vvit.githubdockercicd.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/test")
@@ -13,8 +10,8 @@ public class TestController {
         return "Hello, World!";
     }
     //http://localhost:8080/api/v1/test/greet?name=John
-    @GetMapping("/greet?name={name}")
-    public String greet(@PathVariable String name) {
+    @GetMapping("/greet")
+    public String greet(@RequestParam String name) {
         return "Hello, " + name + "!";
     }
 }
