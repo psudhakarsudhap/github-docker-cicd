@@ -9,5 +9,4 @@ public class GithubDockerCicdApplication {
     public static void main(String[] args) {
         SpringApplication.run(GithubDockerCicdApplication.class, args);
     }
-
 }
