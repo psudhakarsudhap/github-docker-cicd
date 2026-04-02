@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 public class TestController {
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hello, World! update update";
+        return "Hello, World! update update update";
     }
 
     //http://localhost:8080/api/v1/test/greet?name=John
